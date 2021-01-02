@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="App" max_length="40" name="app" type="string"/>
+        <element label="Demo" max_length="40" name="demo" type="string"/>
+        <element label="Opa" max_length="40" name="opa" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Asset" max_length="40" name="u_asset" type="string">
+            <choice>
+                <element inactive_on_update="false" label="PC" sequence="0" value="pc"/>
+                <element inactive_on_update="false" label="VDI" sequence="1" value="vdi"/>
+                <element inactive_on_update="false" label="No Asset" sequence="2" value="no asset"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_requestedfor" reference="cmdb_ci_appl_dot_net" type="reference"/>
+    </element>
+</database>
